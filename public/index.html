@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Socket.IO chat</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+<body>
+  <header>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-3">
+        <img class="logo" src="assets/img/chat-l.png" alt="logo">
+      </div>
+      <div class="col-md-6">
+        <h1>Chat Online</h1>
+      </div>
+    </div>
+  </header>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="input-group" id="nickContainer">
+        <input type="text" class="form-control" id="nickname" placeholder="Ingrese su Nombre de Usuario">
+        <span class="input-group-btn">
+          <button class="btn btn-default" id="setNick" type="button" >Go!</button>
+        </span>
+      </div><!-- /input-group -->
+      <div class="alert fade in alert-danger alert-dismissable" data-dismiss="alert" id="login-error" style="display:none;" >
+        <button type="button" class="close" id="closeAlert" >x</button>
+        Ese nombre de usuario ya ha sido escogido, prueba con otro
+      </div>
+    </div><!-- /.col-lg-6 -->
+  </div>
+  <div class="container" id="cont-chat">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-1 select">
+        <select name="" id="" class="form-control" >
+          <option value="chan-a">Channel A</option>
+          <option value="chan-b">Channel B</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-1 panel">
+        <ul id="chat">
+          
+        </ul>
+      </div>
+      <div class="col-md-2 cont-userss panel-primary">
+        <div class="panel-heading nicks">Users</div>
+        <ul id="users" class="panel-body">
+          
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-1">
+        <div id="controls">
+          <form action="" class="input-group" id="sendMessage">
+            <input class="form-control" type="text" id="message" placeholder="Escribe tu mensaje...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit" value="Enviar">Enviar</button>
+            </span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+</html>
+
+
